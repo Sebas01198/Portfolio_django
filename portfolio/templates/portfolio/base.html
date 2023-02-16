@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+
+    {%load static %}
+
+    <link rel="stylesheet" href="{% static 'portfolio/sass/styles.css' %}" />
+    <script
+      src="https://kit.fontawesome.com/b1771a1380.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+/>
+  </head>
+  <body>
+    <main class="main-container">
+      <header class="header">
+        <img class="header__logo" src="{% static 'portfolio/images/logotipo.png' %}" alt="" />
+        <div class="header-icons">
+          <i class="fa-solid fa-moon header-icons__moon"></i>
+          <i class="fa-solid fa-bars header-icons__menu"></i>
+        </div>
+
+        <nav class="navbar">
+          <ul class="navbar__items">
+            <li><a href="#" class="navbar__link">Inicio</a></li>
+            <li><a href="#" class="navbar__link">Portafolio</a></li>
+            <li><a href="#" class="navbar__link">Sobre mi</a></li>
+            <li><a href="#" class="navbar__link">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="header__moon-desktop">
+          <i class="fa-solid fa-moon"></i>
+        </div>
+
+        <!-- inicio del modal navbar -->
+        <nav class="navbar-modal">
+          <div class="navbar-modal__icon">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+
+          <ul class="navbar-modal__items">
+            <li><a href="#" class="navbar-modal__link">Inicio</a></li>
+            <li><a href="#" class="navbar-modal__link">Portafolio</a></li>
+            <li><a href="#" class="navbar-modal__link">Sobre mi</a></li>
+            <li><a href="#" class="navbar-modal__link">Contacto</a></li>
+          </ul>
+        </nav>
+        <!-- fin del modal navbar -->
+      </header>
+
+      <section class="content">
+        <div class="description">
+          <div class="description__img"></div>
+          <div class="description__about">
+            <h2 class="description__name">¡Hola, soy sebastian sarmiento!</h2>
+            <p class="description__text">
+              web<span class="description__developer">Developer</span
+              ><span class="description__fullstack">FullStack</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="portafolio">
+        <h2 class="portafolio__title">Mi portafolio</h2>
+        <div class="portafolio__projects">
+          <div class="portafolio__card">
+            <button class="portafolio__btn">Ver</button>
+          </div>
+          <div class="portafolio__card">
+            <button class="portafolio__btn">Ver</button>
+          </div>
+          <div class="portafolio__card">
+            <button class="portafolio__btn">Ver</button>
+          </div>
+          <button class="portafolio__icon-add">
+            <i class="fa-sharp fa-solid fa-plus"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="technologies">
+        <h2 class="technologies__title">Tecnologias para el desarrollo</h2>
+        <div class="technologies__used">
+          <div class="technologies__card">
+            <div class="technologies__description">
+              <i class="fa-solid fa-database"></i>
+              <h3 class="technologies__description-title">programacion</h3>
+            </div>
+          </div>
+          <div class="technologies__card">
+            <div class="technologies__description">
+              <i class="fa-solid fa-database"></i>
+              <h3 class="technologies__description-title">Base de datos</h3>
+            </div>
+          </div>
+          <div class="technologies__card">
+            <div class="technologies__description">
+              <i class="fa-duotone fa-pen-paintbrush"></i>
+              <h3 class="technologies__description-title">Base de datos</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="{% static 'portfolio/js/app.js'%}"></script>
+  </body>
+</html>
