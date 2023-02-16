@@ -8,17 +8,19 @@
 
     {%load static %}
 
-    <link rel="stylesheet" href="{% static 'portfolio/sass/styles.css' %}" />
     <script
-      src="https://kit.fontawesome.com/b1771a1380.js"
-      crossorigin="anonymous"
+    src="https://kit.fontawesome.com/b1771a1380.js"
+    crossorigin="anonymous"
     ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
-      rel="stylesheet"
-/>
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/portfolio/sass/styles.css' %}" />
+  
   </head>
   <body>
     <main class="main-container">
@@ -31,7 +33,7 @@
 
         <nav class="navbar">
           <ul class="navbar__items">
-            <li><a href="#" class="navbar__link">Inicio</a></li>
+            <li><a href="#" class="navbar__link link-light">Inicio</a></li>
             <li><a href="#" class="navbar__link">Portafolio</a></li>
             <li><a href="#" class="navbar__link">Sobre mi</a></li>
             <li><a href="#" class="navbar__link">Contacto</a></li>
@@ -71,20 +73,22 @@
       </section>
 
       <section class="portafolio">
+        
         <h2 class="portafolio__title">Mi portafolio</h2>
         <div class="portafolio__projects">
-          <div class="portafolio__card">
-            <button class="portafolio__btn">Ver</button>
+          <!-- cards con back -->
+          {% for project in projects%}
+          <div class="card" style="width: 18rem;">
+            <img src="{{project.image.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{project.title}}</h5>
+              <p class="card-text">{{project.description}}</p>
+              <a href="{{project.url}}" target="_blank" class="btn btn-warning white">Ver proyecto</a>
+            </div>
           </div>
-          <div class="portafolio__card">
-            <button class="portafolio__btn">Ver</button>
-          </div>
-          <div class="portafolio__card">
-            <button class="portafolio__btn">Ver</button>
-          </div>
-          <button class="portafolio__icon-add">
-            <i class="fa-sharp fa-solid fa-plus"></i>
-          </button>
+
+          {%endfor%}
+
         </div>
       </section>
 
@@ -113,6 +117,13 @@
       </section>
     </main>
 
+    <footer class="main-container">
+        <div class="contacto">
+          <p></p>
+        </div>
+    </footer>
+
     <script src="{% static 'portfolio/js/app.js'%}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
 </html>

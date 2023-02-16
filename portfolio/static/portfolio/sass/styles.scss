@@ -5,6 +5,7 @@
 @use 'description';
 @use 'portafolio';
 @use 'technologies';
+@use 'footer';
 *{
     padding: 0;
     margin:0;
@@ -22,6 +23,7 @@ li{
 body{
     font-family: 'Inter', sans-serif;
     background-color: #f3f3f3;
+   
 }
 .main-container{
     margin: auto;

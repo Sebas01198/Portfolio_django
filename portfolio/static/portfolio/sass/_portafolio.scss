@@ -1,6 +1,7 @@
 @use 'variables' as v;
 .portafolio{
     padding: 80px 20px;
+    height: auto;
     
     background-color: rgb(229 229 229);
     &__title{
@@ -9,6 +10,10 @@
     &__projects{
         display: flex;
         flex-direction: column;
+        width: 80%;
+        margin: auto;
+        flex-wrap: wrap;
+        gap: 20px;
     }
     &__card{
         width: 100%;

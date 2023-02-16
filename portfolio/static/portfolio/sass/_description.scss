@@ -2,6 +2,7 @@
 .description{
     background-color: white;
     padding: 0 20px;
+    height: 900px;
     
     &__img{
         background-image: url('../images/Web\ Developer_Flatline.png');
@@ -11,9 +12,6 @@
         width: 100%;
         height: 400px;
         background-position-x: -50px;
-    }
-    &__about{
-        border-bottom: 1px solid black;
     }
     &__name{
         color: v.$orange;
