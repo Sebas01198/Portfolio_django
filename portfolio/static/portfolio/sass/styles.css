@@ -108,7 +108,7 @@
 .description {
   background-color: white;
   padding: 0 20px;
-  height: 900px;
+  height: 90vh;
 }
 .description__img {
   background-image: url("../images/Web Developer_Flatline.png");
@@ -236,7 +236,7 @@
 }
 
 .technologies {
-  padding: 80px 20px;
+  padding: 100px 20px;
   background-color: rgb(92, 92, 92);
 }
 .technologies__used {
@@ -245,6 +245,7 @@
 }
 .technologies__title {
   text-align: center;
+  color: white;
 }
 .technologies__card {
   width: 100%;
@@ -283,9 +284,25 @@
   }
 }
 
-footer {
-  background-color: #FFAA29;
-  padding: 50px;
+.footer {
+  background-color: white;
+  padding: 100px;
+  text-align: center;
+}
+.footer__title {
+  color: black;
+}
+.footer__redes {
+  font-size: 40px;
+}
+.footer__linkedin {
+  color: #0A66C2;
+}
+.footer__github {
+  color: #161B22;
+}
+.footer__whatsapp {
+  color: #00A884;
 }
 
 * {

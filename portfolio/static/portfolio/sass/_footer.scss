@@ -1,6 +1,23 @@
 @use 'variables' as v;
 
-footer{
-    background-color: v.$orange;
-    padding: 50px;
+.footer{
+    background-color: white;
+    padding: 100px;
+    text-align: center;
+
+    &__title{
+        color: black;
+    }
+    &__redes{
+        font-size: 40px;
+    }
+    &__linkedin{
+        color: #0A66C2;
+    }
+    &__github{
+        color: #161B22;
+    }
+    &__whatsapp{
+        color: #00A884;
+    }
 }
